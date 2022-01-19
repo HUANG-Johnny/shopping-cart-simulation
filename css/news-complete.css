@@ -1,0 +1,87 @@
+.news {
+  margin-top: 50px;
+}
+
+.news h1 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.news .new-record {
+  font-size: 18px;
+  border-bottom: 1px solid #adadad;
+}
+
+.news .new-record .date, .news .new-record .views {
+  color: #db3b00;
+}
+
+.news p {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+#photo .photo-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#photo .photo-title img {
+  width: 45px;
+}
+
+#photo .photo-title h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+#photo .swiper {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+#photo .swiper-slide {
+  font-size: 18px;
+}
+
+#photo .swiper-slide .card {
+  margin-bottom: 30px;
+}
+
+#photo .swiper-slide .card .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#photo .swiper-slide .card .content img {
+  width: 100%;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#photo .swiper-slide .card .content a {
+  color: #000;
+}
+
+#photo .swiper-slide .card .content a:hover {
+  text-decoration: none;
+}
+/*# sourceMappingURL=news-complete.css.map */

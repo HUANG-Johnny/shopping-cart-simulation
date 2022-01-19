@@ -1,0 +1,272 @@
+@import "variables";
+@import "mixin";
+
+
+section {
+	padding: 96px 0;
+}
+
+a{
+    @extend %more_a_link_style;
+}
+
+//以下為輪播區的SCSS
+.carousel-indicators{
+    li{
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        margin: 0 4px;
+        background-color: #000000;
+    }
+    .active{
+        background-color: rgba(59, 130, 246, 1);
+    }
+}
+//以上為輪播區的SCSS
+
+//以下為服務1區的SCSS
+#service_1{
+
+    .container{
+        .service_top_block{
+            position: relative;
+            .service-paragraph{
+                margin-bottom: 80px;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    width: 70px;
+                    height: 4px;
+                    background-color: $color-purple;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .section-title{
+        @extend %title-general;
+    }
+    
+    .service_icon{
+        &::before{
+            @extend %service_icon_bg;
+            width: 90px;
+            height: 90px;
+            transform: translate(-23%,-22%);
+        }
+    }
+
+    .service_btn{
+        @extend %btn_style;
+    }
+
+}
+//以上為服務1區的SCSS
+
+
+//以下為照片牆的SCSS
+
+#photowall{
+    .section-title{
+        @extend %title-general;
+
+    }
+}
+
+.my-img-size{
+    @include size(100%,100%,10px);
+
+}
+
+//以上為照片牆的SCSS
+
+//以下為商務區的SCSS
+#business{
+    .section-title{
+        @extend %title-has-underline;
+    }
+
+    .business-block{
+        margin-top: 70px;
+
+        h3{
+            font-size: 12px;
+            color: $color-purple;
+            margin-bottom: 0px;
+        }
+        h2{
+            font-size: 20px;
+        }
+    }
+    
+}
+//以上為商務區的SCSS
+
+//以下為服務2區的SCSS
+#service_2{
+    position: relative;
+
+    .service_item_tbline{
+        padding: 50px 0;
+        margin: 50px 0;
+        border-top: 1px solid rgba(59, 62, 68, 0.2);
+        border-bottom: 1px solid rgba(59, 62, 68, 0.2);
+    }
+    
+    .service2_btn{
+        @extend %btn_style;
+        margin-top: 30px;
+    }
+    .service_icon{
+        margin: 0 70px;
+        &::before{
+            @extend %service_icon_bg;
+        }
+    }
+}
+//以上為服務2區的SCSS
+
+// 以下主打商品區的SCSS
+#highlight_product{
+
+    .card{
+        .comment{
+            .star{
+                color: $color-purple;
+            }
+
+            .media{
+                border-left: 2px solid rgba(59, 62, 68, 0.2);
+            }
+        }
+    }
+
+
+    .color-label{
+        margin: 0;
+        width: 20px;
+		height: 20px;
+        border-radius: 50%;
+        border: 2px solid #aaa;
+
+        .color-radio {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+
+    .service_btn{
+        @extend %btn_style;
+    }
+
+    .thePrice{
+        font-size: 25px;
+    }
+
+    .like-btn{
+        padding: 0;
+        i{
+            font-size: 35px;
+        }
+    }
+
+}
+// 以上主打商品區的SCSS
+
+
+// 以下為其他商品商品區的SCSS
+#other_product{
+    .card-body{
+        h3{
+            font-size: 10px;
+            color: #989899;
+        }
+        h2{
+            font-size: 22px;
+            font-weight: 350;
+        }
+        p{
+            font-size: 17px;
+            color: #5b5b5c;
+        }
+    }
+}
+// 以上為其他商品商品區的SCSS
+
+// 以下為地圖與feedback區的SCSS
+#map{
+    position: relative;
+    height: 850px;
+    
+    .container{
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
+        
+        .feedback{
+            width: 40%;
+            .card-body{
+                .message_textarea{
+                    resize : none;  //取消自己可以拖曳textarea的功能
+                }
+                .feedback_btn{
+                    @extend %btn_style;
+                }
+                p{
+                    font-size: 10px;
+                    color: #787879;
+                }
+            }
+        }
+
+    }
+}
+
+// 以上為地圖與feedback區的SCSS
+
+
+@media (max-width:992px) {
+    
+    #highlight_product{
+        img{
+            width: 100%;
+            height: 256px;
+        }
+    }
+}
+
+@media  (max-width:768px)  {
+    #service_2{
+        .service_item{
+            flex-direction: column;
+            
+            
+            .service_textblock{
+                align-items: center;
+            }
+        }
+        .service_mid_item{
+            flex-direction: column-reverse;
+            .service_textblock{
+                align-items: center;
+            }
+        }
+    }
+
+    #map{
+        .container{
+            right: 0;
+            .feedback{
+                width: 100%;
+            }
+
+        }
+    }
+
+}

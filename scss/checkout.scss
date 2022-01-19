@@ -1,0 +1,146 @@
+@import "variables";
+@import "mixin";
+
+
+#cart {
+    background-color: #D1D5DB;
+    
+    .card-body{
+        h2{
+            font-weight: 900;
+        }
+    }
+
+    .card{
+        background-color: #F3F4F6;
+
+        .progress-block{
+            border-bottom: 2px solid rgba(59, 62, 68, 0.2);
+            .progress{
+                top:16px;
+                right: 0;
+                transform: translateX(50%);
+                width: 65%;
+                height: 10px;
+				
+            }
+            .step{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #FFFFFF; 
+
+                //同時具有.step與.active的
+                &.active {
+                    background-color: #28A745;
+					color: #fff;
+				}
+            }
+        }
+        .backToShop_btn{
+            &:hover{
+                color: #0000008c;
+            }
+        }
+
+        .backStep_btn{
+            background-color: #FFFFFF;
+            color: rgba(59,130,246,1);
+            border: 2px solid rgba(59,130,246,1);
+            &:hover{
+                background-color: rgba(37,99,235,1);;
+                color: #FFFFFF;
+            }
+        }
+
+        .nextStep_btn{
+            background-color: rgba(59,130,246,1);
+            color: #FFFFFF;
+            &:hover{
+                background-color: rgba(37,99,235,1);;
+                
+            }
+        }
+
+        // 以下為第一步的SCSS
+        .order-item{
+            .order-item-info{
+                img{
+                    border-radius: 50%;
+                }
+                p{
+                    margin: 0;
+                }
+                span{
+                    font-size: 10px;
+                    color: #989899;
+                }
+
+            }
+            .order-item-calculate{
+                input{
+                    width: 25px;
+                    border: 1px solid #989899;
+                    border-radius: 5px;
+                }
+                //去掉內建的上下箭頭
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+
+                button{
+                    border: none;
+                }
+                >span{
+                    font-size: 12px;
+                    margin-left: 20px;
+                    .item-subtotal{
+                        display: inline-block;
+                        width: 40px;
+                        text-align: end;
+                    }
+                }
+            }
+        }
+        .count, .subtotal, .freight, .total{
+            color: #aaaaac;
+        }
+        .order-sum-allItem,  .order-sum-allSubtotal, .order-sum-fee, .order-sum-total{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        // 以上為第一步的SCSS
+
+        //以下為第二步的SCSS
+        .paymentMethod_form-group{
+            div{
+                font-size: 20px;
+            }
+        }
+        //以上為第二步的SCSS
+
+
+        //以下為第四步的SCSS
+        .order-item-price{
+            span{
+                &.order-item_count{
+                    font-size: 20px;
+                }
+
+            }
+        }
+
+        .send_information{
+            label{
+                width: 50px;
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+            .infor_text{
+                font-size: 20px;
+            }
+        }
+        //以上為第四步的SCSS
+    }
+}

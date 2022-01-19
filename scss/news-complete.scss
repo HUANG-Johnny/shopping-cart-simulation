@@ -1,0 +1,72 @@
+.news{
+    margin-top: 50px;
+    h1{
+        font-size: 32px;
+        font-weight: 900;
+       
+    }
+
+    .new-record{
+        font-size: 18px;
+        border-bottom: 1px solid #adadad;
+
+        .date,.views{
+            color: #db3b00;
+            
+        }
+    }
+    p{
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+}
+
+
+#photo{
+    .photo-title{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 45px;
+
+        }
+        position: relative;
+        h3{
+            display: inline-block;
+            margin: 0;
+        }
+    }
+
+    .swiper{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+    }
+    .swiper-slide{
+        font-size: 18px;
+        .card{
+            margin-bottom: 30px;
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                img{
+                   width: 100%;
+                   height: 30vh;
+                   object-fit: cover;
+                }
+                a{
+                    
+                    color: #000;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,8 @@
+
+                    //預設值,在呼叫的時候可以不給參數,給了就會用那個帶進來的參數
+@mixin size($w, $h, $bdrs:0) {
+    width: $w;
+    height: $h;
+    border-radius: $bdrs;
+    border:1px solid #000;
+}

@@ -1,0 +1,51 @@
+$font-gray: #555;
+$font-red: #a22;
+$color-purple: rgb(81, 94, 216);
+
+
+//用%開頭命名不會是先被編譯出來
+
+%title-general{
+    font-size: 28px;
+}
+
+%title-has-underline{
+    position: relative;
+    font-size: 28px;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        background-color: $color-purple;
+        display: block;
+        border-radius: 10px;
+    }
+
+}
+
+%more_a_link_style{
+    text-decoration: none;
+    color: $color-purple;
+    &:hover{
+        color: rgb(109, 123, 243);
+        text-decoration: none;
+    }
+}
+
+%btn_style{
+    background-color: $color-purple;
+    color: #FFFFFF;
+}
+
+%service_icon_bg{
+    content: '';
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        transform: translate(-25%,-25%);
+        background-color: rgba(59, 130, 246, 0.2);
+        border-radius: 50%;
+        z-index: -1;
+}

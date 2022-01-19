@@ -1,0 +1,96 @@
+@import "variables";
+
+//以下為navbar區
+nav{
+    .navbar-nav{
+        a{
+            &:active{
+                border: 1px solid #000000;
+                border-radius: 5px;
+            }
+        }
+        .nav-item{
+            font-weight: 600;   
+        }  
+    }
+}
+
+//以上為navbar區
+
+
+//以下為footer區
+footer{
+    .footer_block{
+        margin: 96px 0;
+        .footer-menu{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+    
+            .footer-menu-title{
+                margin-bottom: 10px;
+            }
+            .footer-menu-item{
+                color: $font-gray;
+            }
+        }
+    }
+    .footer_other{
+        p{
+            color: rgba(107,114,128,1);;
+        }
+        .media_group{
+            a{
+                i{
+                    color: rgba(107,114,128,1);
+                }
+            }
+        }
+    }
+}
+
+//以上為footer區
+
+
+@media  (max-width:992px)  {
+    footer{
+        .footer_block{
+            .footer_block_1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+            }
+        }
+    }
+}
+
+@media  (max-width:768px)  {
+    footer{
+        .footer_block{
+            .footer_block_1{
+                
+                align-items: center;
+            }
+            .footer_block_2{
+               ul{
+                   text-align: center;
+               }
+
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .footer_other{
+        flex-direction: column;
+        align-items: center;
+        p{
+            margin-bottom: 0;
+        }
+        .media_group{
+            margin-bottom: 10px;
+        }
+    }
+}
